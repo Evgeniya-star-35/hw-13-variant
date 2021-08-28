@@ -66,7 +66,7 @@ async function onLoadMore() {
 refs.gallery.addEventListener("click", onOpenGallery);
 
 function onOpenGallery(e) {
-    e.preventDefault;
+    e.preventDefault();
   if (e.target.nodeName !== "IMG") {
     return;
   }
