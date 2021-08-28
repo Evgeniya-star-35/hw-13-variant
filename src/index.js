@@ -1,6 +1,7 @@
 import { getPictures } from "./services/fetchApi";
 import cardTmp from "./templates/cardTpl.hbs";
-import * as basicLightbox from "basiclightbox";
+import * as basicLightbox from 'basiclightbox';
+import 'basiclightbox/dist/basicLightbox.min.css';
 // ==========
 const options = {
   root: null,
@@ -65,13 +66,13 @@ async function onLoadMore() {
 refs.gallery.addEventListener("click", onOpenGallery);
 
 function onOpenGallery(e) {
+    e.preventDefault;
   if (e.target.nodeName !== "IMG") {
     return;
   }
 
-  basicLightbox
-    .create(
-      `<img src="${e.target.dataset.source}" width="800" height="600"`
-    )
-    .show();
+ const changeModalImage = `<img src=${e.target.dataset.source}/>`;
+  const instance = basicLightbox.create(changeModalImage);
+
+  instance.show();
 }
