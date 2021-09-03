@@ -157,7 +157,7 @@ img {
   background-color: transparent;
 }
 .stats-item {
-  color: rgba(200, 188, 9, 0.5);
+  color: rgba(20, 164, 221, 0.5);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -296,14 +296,14 @@ img {
   color: #444;
   cursor: pointer;
   border-radius: 50%;
-  border: 3px solid gold;
+  border: 5px solid gold;
   display: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .back_to_top:hover {
   background: #83b4eb;
-  border: 3px solid transparent;
+  border: 5px solid transparent;
 }
 
 .back_to_top-show {
