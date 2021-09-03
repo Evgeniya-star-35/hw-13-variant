@@ -14,8 +14,8 @@ body {
   color: #000;
   font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.5;
-  background-color: rgb(170, 64, 161);
-  /* background-image: url(../images/line.jpg); */
+  /* background-color: rgb(170, 64, 161); */
+  background-image: url(../images/prince.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
@@ -39,10 +39,10 @@ img {
   height: 60px;
   outline: transparent;
   border-radius: 20px;
-  border: 5px solid rgb(240, 138, 155);
+  border: 5px solid rgb(235, 220, 16);
 }
 .input:focus-within {
-  border: 5px solid rgb(20, 195, 20);
+  border: 5px solid rgb(105, 195, 20);
 }
 /* .search{
   display: block;
@@ -93,10 +93,10 @@ img {
   padding: 5px 10px;
   margin-left: 20px;
   font-weight: bolder;
-  color: rgba(216, 192, 192, 0.911);
-  background-color: rgb(236, 126, 126);
+  color: rgba(241, 58, 89, 0.911);
+  background-color: rgb(166, 236, 126);
   border-radius: 20px;
-  border: 5px solid rgb(204, 119, 243);
+  border: 5px solid rgb(217, 231, 27);
 }
 .search:focus,
 .search:hover {
@@ -152,11 +152,12 @@ img {
 }
 .stats {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 10px;
   background-color: transparent;
 }
 .stats-item {
+  color: rgba(200, 188, 9, 0.5);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -288,21 +289,21 @@ img {
   bottom: 100px;
   right: 5px;
   z-index: 1;
-  width: 40px;
+  width: 45px;
   height: 40px;
   line-height: 30px;
   background: #f5f5f5;
   color: #444;
   cursor: pointer;
   border-radius: 50%;
-  border: 3px solid rgb(255, 30, 98);
+  border: 3px solid gold;
   display: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .back_to_top:hover {
-  background: #8ee665;
-  border: 2px solid transparent;
+  background: #83b4eb;
+  border: 3px solid transparent;
 }
 
 .back_to_top-show {
