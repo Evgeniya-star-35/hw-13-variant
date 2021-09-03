@@ -71,13 +71,10 @@ function onOpenGallery(e) {
 
   const instance = basicLightbox.create(`<img src=${e.target.dataset.source}/>`);
   instance.show();
-}
-window.addEventListener('keydown', onCloseEsc);
-
-function onCloseEsc(e) {
-  const ESC_KEY_CODE = 'Escape';
-  if (e.code === ESC_KEY_CODE) {
-    const instance = basicLightbox.create(`<img src=${e.target.dataset.source}/>`);
-    instance.close();
-  }
+  window.addEventListener('keydown', e => {
+    const ESC_KEY_CODE = 'Escape';
+    if (e.code === ESC_KEY_CODE) {
+      instance.close();
+    }
+  });
 }
