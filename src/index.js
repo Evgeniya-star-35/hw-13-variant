@@ -16,6 +16,7 @@ const refs = {
   gallery: document.querySelector('.gallery'),
   loadMore: document.querySelector('#load-more'),
   img: document.querySelector('img'),
+  goTopBtn: document.querySelector('.back_to_top'),
 };
 const state = { page: 1, value: '' };
 refs.loadMore.style.visibility = 'hidden';
@@ -77,4 +78,25 @@ function onOpenGallery(e) {
       instance.close();
     }
   });
+}
+// scroll up
+window.addEventListener('scroll', trackScroll);
+refs.goTopBtn.addEventListener('click', backToTop);
+
+function trackScroll() {
+  var scrolled = window.pageYOffset;
+  var coords = document.documentElement.clientHeight;
+
+  if (scrolled > coords) {
+    refs.goTopBtn.classList.add('back_to_top-show');
+  }
+  if (scrolled < coords) {
+    refs.goTopBtn.classList.remove('back_to_top-show');
+  }
+}
+function backToTop() {
+  if (window.pageYOffset > 0) {
+    window.scrollBy(0, -80);
+    setTimeout(backToTop, 0);
+  }
 }
